@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        padding: 15px;
+        background-color: green;
+        margin-bottom: 20px;
+    }
+
+    &-main {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        min-height: 500px;
+        background-color: green;
+        margin-bottom: 20px;
+    }
+
+    &-buttom {
+        background-color: green;
+        padding: 20px;
+    }
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &-img {
+        width: 40px;
+    }
+
+    &-title {
+        font-size: 26px;
+    }
+}
+
+p {
+    font-size: 20px;
+}
+
+li {
+    padding-left: 30px;
+    list-style-type: none;
+}
+
+header {
+    padding: 15px;
+    background-color: lightgreen;
+    display: flex;
+    border-top-left-radius: 33px;
+    border-bottom-left-radius: 33px;
+    box-shadow: 40px 1px 53px greenyellow;
+}
+
+nav {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: lightgreen;
+    border-top-right-radius: 33px;
+    border-bottom-right-radius: 33px;
+    box-shadow: -40px 1px 53px greenyellow;
+    width: 30%;
+}
+
+.time {
+    box-shadow: 0px 0px 53px greenyellow;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: lightgreen;
+}
+
+.side-bar {
+    border-left: 5px solid greenyellow;
+    padding: 10px;
+}
+
+main {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: greenyellow;
+}
+
+.error {
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+
+    &-div {
+        margin: 40px auto;
+
+    }
+}
+
+.link__btn {
+    &-delete {
+        padding: 2px;
+        border: 2px solid rgb(82, 4, 4);
+        background: rgb(248, 127, 127);
+        border-radius: 18px;
+        font-size: 12px;
+
+        &:hover {
+            background: rgb(234, 202, 202);
+        }
+    }
+
+    &-update {
+        padding: 2px;
+        border: 2px solid rgb(15, 10, 147);
+        background: rgb(125, 135, 226);
+        border-radius: 18px;
+        font-size: 12px;
+
+        &:hover {
+            background: rgb(203, 233, 238);
+        }
+    }
+
+    &-logout {
+        padding: 5px;
+        border: 2px solid rgb(48, 48, 48);
+        background: rgb(163, 163, 170);
+        border-radius: 18px;
+        font-size: 12px;
+        color: black;
+
+        &:hover {
+            background: rgb(167, 200, 206);
+        }
+    }
+
+    &-login {
+        padding: 5px;
+        border: 3px solid rgb(2, 250, 48);
+        background: rgb(153, 223, 160);
+        border-radius: 18px;
+        font-size: 18px;
+        color: black;
+
+        &:hover {
+            background: rgb(157, 167, 157);
+            border: 3px solid rgb(160, 233, 173);
+            color: rgb(26, 79, 35);
+        }
+    }
+
+    &-create {
+        padding: 3px;
+        border: 2px solid rgb(2, 250, 48);
+        background: rgb(112, 224, 123);
+        border-radius: 18px;
+        font-size: 15px;
+        color: rgb(10, 104, 6);
+
+        &:hover {
+            background: rgb(160, 233, 173);
+            border: 2px solid rgb(160, 233, 173);
+            color: rgb(26, 79, 35);
+        }
+    }
+
+}
+
+.user {
+    &__item {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__name {
+        color: aquamarine;
+    }
+}
+
+.submit-btn {
+    padding: 5px 12px;
+    border: 3px solid rgb(2, 250, 48);
+    background: rgb(153, 223, 160);
+    border-radius: 18px;
+    font-size: 18px;
+    color: black;
+
+    &:hover {
+        background: rgb(157, 167, 157);
+        border: 3px solid rgb(160, 233, 173);
+        color: rgb(26, 79, 35);
+    }
+}

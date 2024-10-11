@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+{{xdebug | raw}}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {# <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> #}
+
+    <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>{{ pageTitle }}</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-top">
+            <header>
+                <a class="logo" href="/">
+                    <img class="logo-img" src="/styles/img/task-list-svgrepo-com.png" alt="">
+                    <h3 class="logo-title">{{ pageTitle }}</h3>
+                </a>
+            </header>
+            <div class="time">
+                <h3 class="time-text" id="server-time">{{ time }}</h3>
+            </div>
+            <nav>
+                <a href="/">Главная</a>
+                <a href="/user">Пользователи</a>
+                <a href="/about">О нас</a>
+            </nav>
+        </div>
+        <div class="container-main">
+            <main class="content-template">
+                {% include content_template_name %}
+            </main>
+            <div class="side-bar">
+                <h3 class="empty"></h3>
+
+                <div class="side-bar__access-block"> {% include access_template_name %}</div>
+            </div>
+        </div>
+        <div class="container-buttom">
+            <footer>
+                <h4 class="copy-right">&copy; Все права защищены</h4>    
+            </footer>
+        </div>
+    </div>
+
+
+<script>
+        
+            const deleteBtn = document.querySelectorAll('.link__btn-delete');
+            deleteBtn.forEach(user => {
+                user.addEventListener('click',  function(e) { 
+                    const userRow = this.closest('tr');
+                    setTimeout(() => {
+                        if (userRow) {
+                            userRow.remove();
+                        }
+                    }, 2000); 
+                });
+            });
+
+        </script>
+</body>
+
+</html>
